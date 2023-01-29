@@ -6,7 +6,7 @@ jobs:
     executor: 
       name: win/server-2019
       size: large
-    parallelism: 30
+    parallelism: 20
     steps:
      - checkout
      - run: |

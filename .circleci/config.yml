@@ -10,9 +10,9 @@ jobs:
     steps:
      - checkout
      - run: |
-          pip install pytest-playwright
-          playwright install
-          pytest up.py
+          docker run -d -p 4444:4444 --shm-size="2g" selenium/standalone-chrome
+          pip install selenium
+          python sel.py
           
 workflows:
   my-workflow:
